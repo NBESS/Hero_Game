@@ -1,4 +1,6 @@
-class Goblin():
+from lib.character import Character
+
+class Goblin(Character):
     def __init__(self, name, health=6, power=2):
         
         self.name = name

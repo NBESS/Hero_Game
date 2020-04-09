@@ -1,4 +1,6 @@
-class Hero():
+from lib.character import Character
+
+class Hero(Character):
     def __init__(self, name, health=10, power=5):
 
         self.name = name
