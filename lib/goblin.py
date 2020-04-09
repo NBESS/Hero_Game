@@ -19,7 +19,7 @@ class Goblin():
             return False 
     
     def print_status(self):
-        print("You have %d health and %d power." % (self.health, self.power))
+        print("The goblin has %d health and %d power." % (self.health, self.power))
 
 
         

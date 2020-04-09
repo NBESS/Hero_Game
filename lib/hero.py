@@ -19,5 +19,5 @@ class Hero():
             return False
     
     def print_status(self):
-        print("The goblin has %d health and %d power." % (self.health, self.power))
+        print("You have %d health and %d power." % (self.health, self.power))
         
