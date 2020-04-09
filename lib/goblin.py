@@ -17,5 +17,9 @@ class Goblin():
             return True
         else:
             return False 
+    
+    def print_status(self):
+        print("You have %d health and %d power." % (self.health, self.power))
+
 
         

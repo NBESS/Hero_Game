@@ -19,8 +19,8 @@ def main():
     goo.power 
 
     while goo.is_alive() and hunter.is_alive():
-        print("You have %d health and %d power." % (hunter.health, hunter.power))
-        print("The goblin has %d health and %d power." % (goo.health, goo.power))
+        hunter.print_status()
+        goo.print_status()
         print()
         print("What do you want to do?")
         print("1. fight goblin")
