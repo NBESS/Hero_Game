@@ -5,4 +5,17 @@ class Goblin():
         self.health = health
         self.power = power
 
-goo = Goblin('Goo E.', 6, 2)
+    def attack(self, enemy):
+        # Goblin attacks hero
+        enemy.health -= self.power
+        print("The goblin does %d damage to you." % self.power)
+        if enemy.health <= 0:
+            print("You are dead.")
+
+    def is_alive(self):
+        if self.health > 0:
+            return True
+        else:
+            return False 
+
+        

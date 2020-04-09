@@ -5,4 +5,16 @@ class Hero():
         self.health = health
         self.power = power
 
-block = Hero('Blockade', 10, 5)
+    def attack(self, enemy):
+        # Hero attacks goblin
+        enemy.health -= self.power
+        print("You do %d damage to the goblin." % self.power)
+        if enemy.health <= 0:
+            print("The goblin is dead.")
+
+    def is_alive(self):
+        if self.health > 0:
+            return True
+        else:
+            return False
+        
