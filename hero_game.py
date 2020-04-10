@@ -6,17 +6,22 @@ In this simple RPG game, the hero fights the goblin. He has the options to:
 3. flee
 
 """
+from lib.character import Character
 from lib.hero import Hero
 from lib.goblin import Goblin
+from lib.zombie import Zombie
 
 
 def main():
-    hunter = Hero('Hunter')
-    goo = Goblin('Goo E.')
+    hunter = Hero('Hunter', health=10, power=5)
+    goo = Goblin('Goo E.', health=6, power=2)
+    zim = Zombie('Zimm', health=1, power=3)
     hunter.health
     hunter.power
     goo.health 
     goo.power 
+    zim.health
+    zim.power
 
     while goo.is_alive() and hunter.is_alive():
         hunter.print_status()
