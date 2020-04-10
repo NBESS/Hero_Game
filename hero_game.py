@@ -13,9 +13,9 @@ from lib.zombie import Zombie
 
 
 def main():
-    hunter = Hero('Hunter', health=10, power=5)
-    goo = Goblin('Goo E.', health=6, power=2)
-    zim = Zombie('Zimm', health=1, power=3)
+    hunter = Hero('Hunter', 10, 5)
+    goo = Goblin('Goo E.', 6, 2)
+    zim = Zombie('Zimm', 1, 3)
     hunter.health
     hunter.power
     goo.health 
@@ -23,19 +23,19 @@ def main():
     zim.health
     zim.power
 
-    while goo.is_alive() and hunter.is_alive():
+    while zim.is_alive() and hunter.is_alive():
         hunter.print_status()
-        goo.print_status()
+        zim.print_status()
         print()
         print("What do you want to do?")
-        print("1. fight goblin")
+        print("1. fight Zombie")
         print("2. do nothing")
         print("3. flee")
         print("> ",)
         user_input = input()
         if user_input == "1":
-            # Hero attacks goblin
-            hunter.attack(goo)
+            # Hero attacks Zombie
+            hunter.attack(zim)
         elif user_input == "2":
             pass
         elif user_input == "3":
@@ -44,8 +44,14 @@ def main():
         else:
             print("Invalid input %r" % user_input)
 
-        if goo.health > 0:
-            # Goblin attacks hero
-            goo.attack(hunter)
+        if zim.health > 0:
+            # Zombie attacks hero
+            zim.attack(hunter)
+        
+        elif zim.health < 0:
+            # Zombie invokes Undead Rebirth
+            zim.undead_rebirth(10)
+
+        
 
 main()
